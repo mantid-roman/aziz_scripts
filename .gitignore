@@ -1,0 +1,8 @@
+*.py[cod]
+*~
+*.aux
+*.gz
+*.pdf
+*.log
+.project
+.pydevproject

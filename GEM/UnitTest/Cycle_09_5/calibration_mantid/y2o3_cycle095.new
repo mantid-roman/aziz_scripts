@@ -1,0 +1,331 @@
+4411  Y2O3  cycle 095
+! Current global Chi2 (Bragg contrib.) =      246.5    
+NPATT      6       0 0 0 0 0 1 <- Flags for patterns (1:refined, 0: excluded)
+W_PAT   0.000 0.000 0.000 0.000 0.000 1.000
+!Nph Dum Ias Nre Cry Opt Aut
+   1   1   1   0   0   0   1
+!Job Npr Nba Nex Nsc Nor Iwg Ilo Res Ste Uni Cor Anm Int
+  -1  13   0   2   0   1   2   0   5   0   1   0   0   0  !-> Patt#: 1
+  -1  13   0   2   0   1   2   0   5   0   1   0   0   0  !-> Patt#: 2
+  -1  13   0   2   0   1   2   0   5   0   1   0   0   0  !-> Patt#: 3
+  -1  13   0   2   0   1   2   0   5   0   1   0   0   0  !-> Patt#: 4
+  -1  13   0   2   0   1   2   0   5   0   1   0   0   0  !-> Patt#: 5
+  -1  13   0   2   0   1   2   0   5   0   1   0   0   0  !-> Patt#: 6
+!File names of data(patterns) files
+gem48560.gss
+gem48560.gss
+gem48560.gss
+gem48560.gss
+gem48560.gss
+gem48560.gss
+!
+!  Resolution file for Pattern#   1
+gem_cycle084.irf
+!  Resolution file for Pattern#   2
+gem_cycle084.irf
+!  Resolution file for Pattern#   3
+gem_cycle084.irf
+!  Resolution file for Pattern#   4
+gem_cycle084.irf
+!  Resolution file for Pattern#   5
+gem_cycle084.irf
+!  Resolution file for Pattern#   6
+gem_cycle084.irf
+!Mat Pcr NLI Rpa Sym Sho
+   0   2   0   0   0   0
+!Ipr Ppl Ioc Ls1 Ls2 Ls3 Prf Ins Hkl Fou Ana
+   0   2   1   0   4   0  -3  14   0   0   0  !-> Patt#: 1
+   0   2   1   0   5   0  -3  14   0   0   0  !-> Patt#: 2
+   0   2   1   0   5   0  -3  14   0   0   0  !-> Patt#: 3
+   0   2   1   0   5   0  -3  14   0   0   0  !-> Patt#: 4
+   0   2   1   0   5   0  -3  14   0   0   0  !-> Patt#: 5
+   0   2   1   0   5   0  -3  14   0   0   0  !-> Patt#: 6
+!
+!  Bkpos      Wdt    Iabscor for Pattern#  1
+    3000.000  3.0000     2
+!  Bkpos      Wdt    Iabscor for Pattern#  2
+    3000.000  3.0000     2
+!  Bkpos      Wdt    Iabscor for Pattern#  3
+    3400.000  3.0000     2
+!  Bkpos      Wdt    Iabscor for Pattern#  4
+    3000.000  3.0000     2
+!  Bkpos      Wdt    Iabscor for Pattern#  5
+    3000.000  3.0000     2
+!  Bkpos      Wdt    Iabscor for Pattern#  6
+    3000.000  3.0000     2
+!NCY  Eps  R_at  R_an  R_pr  R_gl
+  4  0.30  1.00  1.00  1.00  1.00
+!    TOF-min      <Step>       TOF-max  -> Patt#: 1
+   1200.9609     10.8059  28824.1777
+!    TOF-min      <Step>       TOF-max  -> Patt#: 2
+   1500.8456      8.2614  20647.8320
+!    TOF-min      <Step>       TOF-max  -> Patt#: 3
+   2000.6151      9.5293  21614.2891
+!    TOF-min      <Step>       TOF-max  -> Patt#: 4
+   2802.0835      9.6656  19622.1543
+!    TOF-min      <Step>       TOF-max  -> Patt#: 5
+   3001.7454      9.1132  17883.6719
+!    TOF-min      <Step>       TOF-max  -> Patt#: 6
+   3002.3662      8.2130  16106.3896
+!
+! Excluded regions (LowT  HighT) for Pattern#  1
+        0.00     1200.00
+    17000.00   100000.00
+! 
+! Excluded regions (LowT  HighT) for Pattern#  2
+        0.00     2250.00
+    17000.00   100000.00
+! 
+! Excluded regions (LowT  HighT) for Pattern#  3
+        0.00     2500.00
+    17000.00   100000.00
+! 
+! Excluded regions (LowT  HighT) for Pattern#  4
+        0.00     4000.00
+    17000.00   100000.00
+! 
+! Excluded regions (LowT  HighT) for Pattern#  5
+        0.00     4000.00
+    17000.00   100000.00
+! 
+! Excluded regions (LowT  HighT) for Pattern#  6
+        0.00     4000.00
+    16000.00   100000.00
+! 
+!
+      12    !Number of refined parameters
+!
+!    Zero_i+SHF    Dtt1_i+SHF    Dtt2_i+SHF    TwoThetaBank (Only shifts are refined)
+!       4.01262     779.89001       1.42888       9.39000
+!    Zero    Code      Dtt1    Code      Dtt2    Code   2ThetaBank  -> Patt# 1
+     1.419    0.00     0.000    0.00     0.731    0.00     9.390
+!   Background coefficients/codes  for Pattern#  1
+  73.467     -34.072      21.342     -3.4894     0.34824      0.0000    
+       0.000       0.000       0.000       0.000       0.000       0.000
+!
+!    Zero_i+SHF    Dtt1_i+SHF    Dtt2_i+SHF    TwoThetaBank (Only shifts are refined)
+!       6.57454    1482.22009       1.13996      17.98000
+!    Zero    Code      Dtt1    Code      Dtt2    Code   2ThetaBank  -> Patt# 2
+   -20.184    0.00    20.410    0.00    -3.182    0.00    17.980
+!   Background coefficients/codes  for Pattern#  2
+  46.850     -10.512      11.516     -2.5083     0.32236      0.0000    
+       0.000       0.000       0.000       0.000       0.000       0.000
+!
+!    Zero_i+SHF    Dtt1_i+SHF    Dtt2_i+SHF    TwoThetaBank (Only shifts are refined)
+!      -3.84264    2820.08203       0.34812      34.96000
+!    Zero    Code      Dtt1    Code      Dtt2    Code   2ThetaBank  -> Patt# 3
+     2.640    0.00     8.242    0.00     1.211    0.00    34.960
+!   Background coefficients/codes  for Pattern#  3
+  45.954     -19.531      36.264     -11.210      1.8451      0.0000    
+       0.000       0.000       0.000       0.000       0.000       0.000
+!
+!    Zero_i+SHF    Dtt1_i+SHF    Dtt2_i+SHF    TwoThetaBank (Only shifts are refined)
+!     -42.56073    4890.95020     -10.45551      63.62000
+!    Zero    Code      Dtt1    Code      Dtt2    Code   2ThetaBank  -> Patt# 4
+   -23.822    0.00     0.000    0.00    -4.763    0.00    63.620
+!   Background coefficients/codes  for Pattern#  4
+  58.407     -23.458      29.386     -6.6342     0.85880      0.0000    
+       0.000       0.000       0.000       0.000       0.000       0.000
+!
+!    Zero_i+SHF    Dtt1_i+SHF    Dtt2_i+SHF    TwoThetaBank (Only shifts are refined)
+!     -10.63214    6667.23340      -6.78993      91.30000
+!    Zero    Code      Dtt1    Code      Dtt2    Code   2ThetaBank  -> Patt# 5
+     4.265    0.00    -6.927    0.00     3.372    0.00    91.300
+!   Background coefficients/codes  for Pattern#  5
+  75.401     -38.867      29.810     -5.2200     0.55296      0.0000    
+       0.000       0.000       0.000       0.000       0.000       0.000
+!
+!    Zero_i+SHF    Dtt1_i+SHF    Dtt2_i+SHF    TwoThetaBank (Only shifts are refined)
+!      -9.10909    9077.65625     -10.44165     154.39999
+!    Zero    Code      Dtt1    Code      Dtt2    Code   2ThetaBank  -> Patt# 6
+     4.558  121.00    -1.393   31.00     6.195  111.00   154.400
+!   Background coefficients/codes  for Pattern#  6
+  114.32     -51.971      26.539     -6.9634     0.74010      0.0000    
+      41.000      21.000      11.000       0.000       0.000       0.000
+!-------------------------------------------------------------------------------
+!  Data for PHASE number:   1  ==> Current R_Bragg for Pattern#  6:     9.18
+!-------------------------------------------------------------------------------
+Y2O3                                                                                                                                                                
+!
+!Nat Dis Ang Jbt Isy Str Furth        ATZ     Nvk More
+   3   0   0   0   0   0   0        567.0000   0   0
+!Contributions (0/1) of this phase to the  6 patterns
+ 1 1 1 1 1 1
+!Irf Npr Jtyp  Nsp_Ref Ph_Shift for Pattern#  1
+   0  13   -1      0      0
+! Pr1    Pr2    Pr3   Brind.   Rmua   Rmub   Rmuc     for Pattern#  1
+  0.000  0.000  1.000  1.000  0.000  0.000  0.000
+!Irf Npr Jtyp  Nsp_Ref Ph_Shift for Pattern#  2
+   0  13   -1      0      0
+! Pr1    Pr2    Pr3   Brind.   Rmua   Rmub   Rmuc     for Pattern#  2
+  0.000  0.000  1.000  1.000  0.000  0.000  0.000
+!Irf Npr Jtyp  Nsp_Ref Ph_Shift for Pattern#  3
+   0  13   -1      0      0
+! Pr1    Pr2    Pr3   Brind.   Rmua   Rmub   Rmuc     for Pattern#  3
+  0.000  0.000  1.000  1.000  0.000  0.000  0.000
+!Irf Npr Jtyp  Nsp_Ref Ph_Shift for Pattern#  4
+   0  13   -1      0      0
+! Pr1    Pr2    Pr3   Brind.   Rmua   Rmub   Rmuc     for Pattern#  4
+  0.000  0.000  1.000  1.000  0.030  0.030  0.030
+!Irf Npr Jtyp  Nsp_Ref Ph_Shift for Pattern#  5
+   0  13   -1      0      0
+! Pr1    Pr2    Pr3   Brind.   Rmua   Rmub   Rmuc     for Pattern#  5
+  0.000  0.000  1.000  1.000  0.010  0.010  0.010
+!Irf Npr Jtyp  Nsp_Ref Ph_Shift for Pattern#  6
+   0  13   -1      0      0
+! Pr1    Pr2    Pr3   Brind.   Rmua   Rmub   Rmuc     for Pattern#  6
+  0.000  0.000  1.000  1.000  0.000  0.000  0.000
+!
+I A -3                   <--Space group symbol
+!Atom   Typ       X        Y        Z     Biso       Occ     In Fin N_t Spc /Codes
+!    beta11   beta22   beta33   beta12   beta13   beta23  /Codes
+Y1     Y       0.25000  0.25000  0.25000  0.26048   0.16667   0   0   2    0                                                                                  
+                  0.00     0.00     0.00    81.00      0.00
+      0.00000  0.00000  0.00000  0.00000  0.00000   0.00000
+         0.00     0.00     0.00     0.00     0.00      0.00
+Y2     Y      -0.03249  0.00000  0.25000  0.25905   0.50000   0   0   2    0                                                                                  
+                  0.00     0.00     0.00    91.00      0.00
+      0.00000  0.00000  0.00000  0.00000  0.00000   0.00000
+         0.00     0.00     0.00     0.00     0.00      0.00
+O1     O       0.39071  0.15216  0.38002  0.33889   1.00000   0   0   2    0                                                                                  
+                  0.00     0.00     0.00   101.00      0.00
+      0.00000  0.00000  0.00000  0.00000  0.00000   0.00000
+         0.00     0.00     0.00     0.00     0.00      0.00
+!-------> Profile Parameters for Pattern #  1
+!  Scale       Extinc      Bov     Str1     Str2     Str3    Strain-Model
+  1.1756       0.0000   0.0000   0.0000   0.0000   0.0000       0
+     0.00000     0.00     0.00     0.00     0.00     0.00
+!     Sig-2      Sig-1      Sig-0        Xt         Yt         Z1      Z0      Size-Model
+!     0.000    159.904      0.000 <- Instr. par. + shifts. Only shifts are refined
+      0.000      6.601      0.000      0.000      0.000      0.000      0.000   0
+       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+!    Gam-2     Gam-1     Gam-0     LStr       LSiz  
+!    0.000     0.000     0.000 <- Instr. par. + shifts. Only shifts are refined
+     0.000     0.000     0.000     0.000     0.000
+      0.00      0.00      0.00      0.00      0.00
+!     a          b         c        alpha      beta       gamma      #Cell Info
+  10.605655  10.605655  10.605655  90.000000  90.000000  90.000000                                                                                   
+    0.00000    0.00000    0.00000    0.00000    0.00000    0.00000
+!      Pref1      Pref2        alph0       beta0       alph1       Kappa
+!  Instr. par. + shifts:    1.597107   33.502865    1.496805   46.025921 <- Only shifts are refined
+    1.000000    0.000000    0.000000    5.548797    0.000000    0.000000
+        0.00        0.00        0.00        0.00        0.00        0.00
+!Absorption correction parameters
+   0.00000    0.00   0.00000    0.00            ABS: ABSCOR1  ABSCOR2
+!-------> Profile Parameters for Pattern #  2
+!  Scale       Extinc      Bov     Str1     Str2     Str3    Strain-Model
+  1.8199       0.0000   0.0000   0.0000   0.0000   0.0000       0
+     0.00000     0.00     0.00     0.00     0.00     0.00
+!     Sig-2      Sig-1      Sig-0        Xt         Yt         Z1      Z0      Size-Model
+!     0.000    283.487      0.000 <- Instr. par. + shifts. Only shifts are refined
+      0.000     31.983      0.000      0.000      0.000      0.000      0.000   0
+       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+!    Gam-2     Gam-1     Gam-0     LStr       LSiz  
+!    0.000     2.231     0.000 <- Instr. par. + shifts. Only shifts are refined
+     0.000     0.000     0.000     0.000     0.000
+      0.00      0.00      0.00      0.00      0.00
+!     a          b         c        alpha      beta       gamma      #Cell Info
+  10.605655  10.605655  10.605655  90.000000  90.000000  90.000000                                                                                   
+    0.00000    0.00000    0.00000    0.00000    0.00000    0.00000
+!      Pref1      Pref2        alph0       beta0       alph1       Kappa
+!  Instr. par. + shifts:    1.597107   33.502865    1.496805   46.025921 <- Only shifts are refined
+    1.000000    0.000000    0.000000    5.548797    0.000000    0.000000
+        0.00        0.00        0.00        0.00        0.00        0.00
+!Absorption correction parameters
+   0.00000    0.00   0.00000    0.00            ABS: ABSCOR1  ABSCOR2
+!-------> Profile Parameters for Pattern #  3
+!  Scale       Extinc      Bov     Str1     Str2     Str3    Strain-Model
+  2.0139       0.0000   0.0000   0.0000   0.0000   0.0000       0
+     0.00000     0.00     0.00     0.00     0.00     0.00
+!     Sig-2      Sig-1      Sig-0        Xt         Yt         Z1      Z0      Size-Model
+!     0.476    285.472      0.000 <- Instr. par. + shifts. Only shifts are refined
+      0.476     28.032      0.000      0.000      0.000      0.000      0.000   0
+       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+!    Gam-2     Gam-1     Gam-0     LStr       LSiz  
+!    0.000     5.142     0.000 <- Instr. par. + shifts. Only shifts are refined
+     0.000     0.641     0.000     0.000     0.000
+      0.00      0.00      0.00      0.00      0.00
+!     a          b         c        alpha      beta       gamma      #Cell Info
+  10.605655  10.605655  10.605655  90.000000  90.000000  90.000000                                                                                   
+    0.00000    0.00000    0.00000    0.00000    0.00000    0.00000
+!      Pref1      Pref2        alph0       beta0       alph1       Kappa
+!  Instr. par. + shifts:    1.597107   33.502865    1.496805   46.025921 <- Only shifts are refined
+    1.000000    0.000000    0.000000    5.548797    0.000000    0.000000
+        0.00        0.00        0.00        0.00        0.00        0.00
+!Absorption correction parameters
+   0.00000    0.00   0.00000    0.00            ABS: ABSCOR1  ABSCOR2
+!-------> Profile Parameters for Pattern #  4
+!  Scale       Extinc      Bov     Str1     Str2     Str3    Strain-Model
+  2.1852       0.0000   0.0000   0.0000   0.0000   0.0000       0
+     0.00000     0.00     0.00     0.00     0.00     0.00
+!     Sig-2      Sig-1      Sig-0        Xt         Yt         Z1      Z0      Size-Model
+!     0.000    226.690      0.000 <- Instr. par. + shifts. Only shifts are refined
+      0.000     31.335      0.000      0.000      0.000      0.000      0.000   0
+       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+!    Gam-2     Gam-1     Gam-0     LStr       LSiz  
+!    0.000     4.499     0.000 <- Instr. par. + shifts. Only shifts are refined
+     0.000     0.000     0.000     0.000     0.000
+      0.00      0.00      0.00      0.00      0.00
+!     a          b         c        alpha      beta       gamma      #Cell Info
+  10.605655  10.605655  10.605655  90.000000  90.000000  90.000000                                                                                   
+    0.00000    0.00000    0.00000    0.00000    0.00000    0.00000
+!      Pref1      Pref2        alph0       beta0       alph1       Kappa
+!  Instr. par. + shifts:    1.597107   33.502865    1.496805   46.025921 <- Only shifts are refined
+    1.000000    0.000000    0.000000    5.548797    0.000000    0.000000
+        0.00        0.00        0.00        0.00        0.00        0.00
+!Absorption correction parameters
+   0.00000    0.00   0.00000    0.00            ABS: ABSCOR1  ABSCOR2
+!-------> Profile Parameters for Pattern #  5
+!  Scale       Extinc      Bov     Str1     Str2     Str3    Strain-Model
+  2.1168       0.0000   0.0000   0.0000   0.0000   0.0000       0
+     0.00000     0.00     0.00     0.00     0.00     0.00
+!     Sig-2      Sig-1      Sig-0        Xt         Yt         Z1      Z0      Size-Model
+!     0.000     77.890      0.000 <- Instr. par. + shifts. Only shifts are refined
+      0.000      5.386      0.000      0.000      0.000      0.000      0.000   0
+       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+!    Gam-2     Gam-1     Gam-0     LStr       LSiz  
+!    0.000     3.918     0.000 <- Instr. par. + shifts. Only shifts are refined
+     0.000     0.000     0.000     0.000     0.000
+      0.00      0.00      0.00      0.00      0.00
+!     a          b         c        alpha      beta       gamma      #Cell Info
+  10.605655  10.605655  10.605655  90.000000  90.000000  90.000000                                                                                   
+    0.00000    0.00000    0.00000    0.00000    0.00000    0.00000
+!      Pref1      Pref2        alph0       beta0       alph1       Kappa
+!  Instr. par. + shifts:    1.597107   33.502865    1.496805   46.025921 <- Only shifts are refined
+    1.000000    0.000000    0.000000    5.548797    0.000000    0.000000
+        0.00        0.00        0.00        0.00        0.00        0.00
+!Absorption correction parameters
+   0.00000    0.00   0.00000    0.00            ABS: ABSCOR1  ABSCOR2
+!-------> Profile Parameters for Pattern #  6
+!  Scale       Extinc      Bov     Str1     Str2     Str3    Strain-Model
+  2.0086       0.0000   0.0000   0.0000   0.0000   0.0000       0
+    61.00000     0.00     0.00     0.00     0.00     0.00
+!     Sig-2      Sig-1      Sig-0        Xt         Yt         Z1      Z0      Size-Model
+!     0.000     26.852      0.000 <- Instr. par. + shifts. Only shifts are refined
+      0.000    -15.214      0.000      0.000      0.000      0.000      0.000   0
+       0.00      51.00       0.00       0.00       0.00       0.00       0.00
+!    Gam-2     Gam-1     Gam-0     LStr       LSiz  
+!    0.000     2.892     0.000 <- Instr. par. + shifts. Only shifts are refined
+     0.000     0.000     0.000     0.000     0.000
+      0.00      0.00      0.00      0.00      0.00
+!     a          b         c        alpha      beta       gamma      #Cell Info
+  10.605655  10.605655  10.605655  90.000000  90.000000  90.000000                                                                                   
+    0.00000    0.00000    0.00000    0.00000    0.00000    0.00000
+!      Pref1      Pref2        alph0       beta0       alph1       Kappa
+!  Instr. par. + shifts:    1.597107   31.086578    1.496805   46.025921 <- Only shifts are refined
+    1.000000    0.000000    0.000000    3.132511    0.000000    0.000000
+        0.00        0.00        0.00       71.00        0.00        0.00
+!Absorption correction parameters
+   0.00000    0.00   0.00000    0.00            ABS: ABSCOR1  ABSCOR2
+!  2Th1/TOF1    2Th2/TOF2  Pattern # 1
+    1203.620   17000.000       1
+!  2Th1/TOF1    2Th2/TOF2  Pattern # 2
+    2250.000   17000.000       1
+!  2Th1/TOF1    2Th2/TOF2  Pattern # 3
+    2500.000   17000.000       1
+!  2Th1/TOF1    2Th2/TOF2  Pattern # 4
+    4000.000   17000.000       1
+!  2Th1/TOF1    2Th2/TOF2  Pattern # 5
+    4000.000   17000.000       1
+!  2Th1/TOF1    2Th2/TOF2  Pattern # 6
+    4000.000   16000.000       1

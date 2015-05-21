@@ -1,0 +1,86 @@
+Instrumental resolution function for GEM/ISIS   cycle084 26/11/2008  GEM42239  Y2O3
+! To be used with function NPROF=13 in FullProf  (Res=5)
+! ----------------------------------------------------  Bank 1
+!       Tof-min(us)    step      Tof-max(us)
+TOFRG   1200.0000      1.0000   100000
+!        Dtt1      Dtt2         Zero
+D2TOF         779.89001     0.69788    2.59362
+!     TOF-TWOTH of the bank
+TWOTH    9.39
+!       Sig-2     Sig-1     Sig-0
+SIGMA    0.000    153.303      0.000
+!       Gam-2     Gam-1     Gam-0
+GAMMA   0.000     0.000     0.000
+!          alph0       beta0       alph1       kappa
+ALFBE       1.597107   27.954067    1.496805   46.025921
+END
+! ----------------------------------------------------- Bank 2
+!       Tof-min(us)    step      Tof-max(us)
+TOFRG   1500.0000      1.0000  100000
+!        Dtt1      Dtt2         Zero
+D2TOF     1461.81006       4.32196    26.75854  
+!     TOF-TWOTH of the bank
+TWOTH    17.98
+!       Sig-2     Sig-1     Sig-0
+SIGMA    0.000    251.504      0.000
+!       Gam-2     Gam-1     Gam-0
+GAMMA   0.000     2.231     0.000
+!          alph0       beta0       alph1       kappa
+ALFBE       1.597107   27.954067    1.496805   46.025921
+END
+! ----------------------------------------------------- Bank 3
+!       Tof-min(us)    step      Tof-max(us)
+TOFRG   2000.0000      1.0000  100000
+!        Dtt1      Dtt2          Zero
+D2TOF      2811.84009      -0.86288   -6.48264  
+!     TOF-TWOTH of the bank
+TWOTH    34.96
+!       Sig-2     Sig-1     Sig-0
+SIGMA    0.000    257.440      0.000
+!       Gam-2     Gam-1     Gam-0
+GAMMA   0.000     4.501      0.000
+!          alph0       beta0       alph1       kappa
+ALFBE       1.597107   27.954067    1.496805   46.025921
+END
+! ----------------------------------------------------- Bank 4
+!       Tof-min(us)    step      Tof-max(us)
+TOFRG   2800.0000      1.0000  100000
+!        Dtt1      Dtt2           Zero
+D2TOF      4890.95020      -5.69251    -18.73873                            
+!     TOF-TWOTH of the bank
+TWOTH    63.62
+!       Sig-2     Sig-1     Sig-0
+SIGMA    0.000    195.355      0.000
+!       Gam-2     Gam-1     Gam-0
+GAMMA   0.000     4.499     0.000
+!          alph0       beta0       alph1       kappa
+ALFBE       1.597107   27.954067    1.496805   46.025921
+END
+! ----------------------------------------------------- Bank 5
+!       Tof-min(us)    step      Tof-max(us)
+TOFRG   3000.0000      1.0000  100000
+!        Dtt1      Dtt2           Zero
+D2TOF      6674.16016      -10.16193  -14.89714   
+!     TOF-TWOTH of the bank
+TWOTH    91.30
+!       Sig-2     Sig-1     Sig-0
+SIGMA    0.000     72.504      0.000
+!       Gam-2     Gam-1     Gam-0
+GAMMA   0.000     3.918    0.000
+!          alph0       beta0       alph1       kappa
+ALFBE       1.597107   27.954067    1.496805   46.025921
+END
+! ----------------------------------------------------- Bank 6
+!       Tof-min(us)    step      Tof-max(us)
+TOFRG   3000.0000      1.0000  130000
+!        Dtt1      Dtt2          Zero
+D2TOF     9079.04980     -16.63645  -13.66699
+!     TOF-TWOTH of the bank
+TWOTH    154.40
+!       Sig-2     Sig-1     Sig-0
+SIGMA    0.000    42.066    0.000
+!       Gam-2     Gam-1     Gam-0
+GAMMA   0.000     2.892     0.000
+!          alph0       beta0       alph1       kappa
+ALFBE       1.597107   27.954067    1.496805   46.025921
+END

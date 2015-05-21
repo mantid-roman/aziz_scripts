@@ -1,0 +1,174 @@
+#----------------------------------------------------
+# Directories empty field ("") Sets all to RawDir read 
+# in the mtd.ini file
+#----------------------------------------------------
+RawDir    
+VanDir   
+VEmptyDir
+SEmptyDir
+#----------------------------------------------------
+# Directories empty field ("") Sets all to GrpOff dir
+#----------------------------------------------------
+GrpDir       B:/GrpOff
+OffDir       B:/GrpOff
+#----------------------------------------------------
+# Calibration & Grouping (generally the same)
+#----------------------------------------------------
+Offsets      offsets_2009_cycle094.cal
+Grouping     offsets_2009_cycle094.cal
+#----------------------------------------------------
+# Calibration Runs
+#----------------------------------------------------
+Vanadium     48566
+V-Empty      48567
+S-Empty      0
+#
+#----------------------------------------------------
+# VANADIUM 
+#----------------------------------------------------
+# 1 --> Focused/corrected Vanadium Nexus File creation and/or reading Control:
+#
+#       yes : supposed to exist, or create a new one with default 
+#             corrections params and default name van_Vrunno_VErunno.nxs
+#       no  : created with the name CorrVanDir.nxs but add _new.nxs if exists
+#       over: overwrite in any case
+#----------------------------------------------------
+#
+ExistingV       over
+#----------------------------------------------------
+# 2 --> Directory/File name of the searched/output Van 
+#       corrected nexus file 
+#       By default Dir, this is ./AnalysisDir/Cycle/Calibration: 
+#----------------------------------------------------
+#
+CorrVanDir                
+#
+# Rem: Next line giving the Van File name is MANDATORY
+#
+CorrVanFile               van_8mm_15x40_spline30
+#----------------------------------------------------
+# Vanadium Correction parameters
+#----------------------------------------------------
+# 3 --> Default Params in case of creation are : 
+# VHeight                    4.0    
+# VRadius                    0.4  
+# VAttenuationXSection       5.1  
+# VScatteringXSection        5.08 
+# VanaNumberDensity          0.072
+# VNumberOfSlices            10   
+# VNumberOfAnnuli            10   
+# VNumberOfWavelengthPoints  100  
+# VExpMethod                 Normal
+#----------------------------------------------------
+#VanPeakRemove                interpol
+#VanSmooth                    20
+#----------------------------------------------------
+VanPeakFile
+VanPeakRemove                spline
+VanSplineCoef                30
+#----------------------------------------------------
+#       Any param can be overrriden below
+#
+VHeight                     2  
+VRadius                     0.4
+#
+#
+# ***************************************************
+# SOLID ANGLE AND EFFICIENCY CORRECTION 
+# ***************************************************
+# Defaults values are (valid for HRPD)
+# LowerLambda               1.4
+# UpperLambda               3
+#----------------------------------------------------
+#
+LowerLambda                 
+UpperLambda                 
+#
+#----------------------------------------------------
+# An existing Nexus file storing the Sac/eff correction may already exists.
+# It is created/searched by default where the Vanadium Nexus File is searched/created  
+# (hence, in the AnalysisDir+Cycle+"Calibration" directory)
+# Unless this is overriden by...
+#----------------------------------------------------
+#
+SacEffDir
+#
+#----------------------------------------------------
+# ...The Nexus file default name is searched as:
+# CorrVanFile+"_detcorr.nxs" 
+# or
+# corr_Vrunno_VErunno.nxs if CorrVanFile=""
+# ...Defaults are always overriden by...
+#----------------------------------------------------
+#
+SacEffFile                
+#
+# ***************************************************
+# SAMPLE CORRECTION PARAMS (Comming...)
+# ***************************************************
+#CorrectSampleAbs                no    
+#SampleHeight                    0.0   
+#SampleRadius                    0.0   
+#SampleAttenuationXSection       0.0   
+#SampleScatteringXSection        0.0   
+#SampleNumberDensity             1     
+#SampleNumberOfSlices            10    
+#SampleNumberOfAnnuli            10    
+#SampleNumberOfWavelengthPoints  100   
+#SampleExpMethod                 Normal
+#
+CorrectSampleAbs                 no
+SampleHeight                        
+SampleRadius                        
+SampleAttenuationXSection           
+SampleScatteringXSection            
+#
+#
+#
+# ***************************************************
+# FOCUSED FILE OUTPUT
+# ***************************************************
+#
+#----------------------------------------------------
+# Focused files in various format are output in the 
+# ./analysisdir/cycle/user directory 
+# The output File naming convention is (XXXXX:run-num, N: bank):
+# For RAW files: 
+#    XYE (split in banks):
+#       X axis in tof hrpXXXXX_"Output"_bN_tof.dat
+#       X asis in D   hrpXXXXX_"Output"_bN_dspc.dat
+#    GSS :
+#       hrpXXXXX_"Output".gss 
+#    Nexus: 
+#       hrpXXXXX_"Output".nxs 
+#----------------------------------------------------
+#
+Scale        1 
+Output         
+XYE-TOF      yes
+XYE-D        yes
+GSS          yes
+Nexus        yes
+#----------------------------------------------------
+# TOTAL number of banks on the instrument 
+#----------------------------------------------------
+Nbank        6
+CropRange    4.0  0.80
+CropRange    4.0  0.80
+CropRange    4.0  0.80
+CropRange    4.0  0.80
+CropRange    4.0  0.80
+CropRange    4.0  0.80
+Bining       0.0008
+Bining       0.0008
+Bining       0.0008 
+Bining       0.0008
+Bining       0.0008
+Bining       0.0008
+#
+#----------------------------------------------------
+# Outputs only banks in the range, or space separated 
+# list given below  
+#----------------------------------------------------
+#
+BankList     1-6
