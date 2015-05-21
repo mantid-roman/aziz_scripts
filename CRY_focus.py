@@ -179,16 +179,16 @@ def rearrange4XYE(OutputFile,expt,units="TOF"):
 	if (units=="D" and expt.saveXYEd) or (units=="TOF" and expt.saveXYEtof):
 		for i in expt.bankList:		
 			inwkpsc="Result"+units+"-"+str(i)
-			SaveFocusedXYE(InputWorkspace=inwkpsc, Filename=OutputFile+"b"+str(i)+"_"+units+".dat", SplitFiles="False", IncludeHeader=False)
-#			SaveFocusedXYE(InputWorkspace=inwkpsc, Filename=OutputFile+"b"+str(i)+"_"+units+".dat", SplitFiles="False")
+			SaveFocusedXYE(InputWorkspace=inwkpsc, Filename=OutputFile+"b"+str(i)+"_"+units+".dat", SplitFiles=False, IncludeHeader=False)
+#			SaveFocusedXYE(InputWorkspace=inwkpsc, Filename=OutputFile+"b"+str(i)+"_"+units+".dat", SplitFiles=False)
 	
 def rearrang4GSS(OutputFile,expt):
 	if expt.GSS == "no":
 		return
 	if len(expt.bankList[1:]) > 1:
-		SaveGSS(InputWorkspace="ResultTOFgrp", Filename=OutputFile+".gss", SplitFiles="False", Append=False )
+		SaveGSS(InputWorkspace="ResultTOFgrp", Filename=OutputFile+".gss", SplitFiles=False, Append=False )
 	else:
-		SaveGSS(InputWorkspace="ResultTOF-1", Filename=OutputFile+".gss", SplitFiles="False", Append=False )
+		SaveGSS(InputWorkspace="ResultTOF-1", Filename=OutputFile+".gss", SplitFiles=False, Append=False )
 	
 # changed by WAK 3/3/2011 following Martyn Gigg's advice on group save 
 def rearrang4Nex(OutputFile,expt):

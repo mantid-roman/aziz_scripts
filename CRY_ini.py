@@ -1,7 +1,8 @@
 from mantid.simpleapi import *
 import CRY_utils
 import re
-import os
+import os.path
+from os.path import abspath, join, dirname
 
 EnvAnalysisdir=''
 print '--------------------- ' 
@@ -15,7 +16,7 @@ class files:
 		if debugMode:
 			self.debugMode=True
 		self.instr                   = instr.lower()
-		self.InsDir                  = os.path.dirname(os.path.realpath( __file__ ))+'/'+instr
+		self.InsDir                  = join(dirname(abspath( __file__ )), instr)
 		print '--------------------- ' 
 		print 'INSTRUMENT DIRECTORY: '+self.InsDir
 		print '--------------------- ' 
@@ -77,54 +78,60 @@ class files:
 		# Default values if none given in Arguments
 		os.chdir(self.InsDir)
 		if UnitTest:
-			self.Analysisdir=self.InsDir+'/UnitTest/'
-			self.RawDir=self.InsDir+'/UnitTest/RAW'
+			self.Analysisdir = join(self.InsDir,'UnitTest')
+			self.RawDir = join(self.InsDir, 'UnitTest', 'RAW')
 		else:
 			if RawDir<>"":
-				self.RawDir= RawDir
+				self.RawDir = RawDir
 			else:
-				self.RawDir= ''			
+				self.RawDir = ''			
 			if Analysisdir<>"":
-				self.Analysisdir = Analysisdir
+				self.Analysisdir = abspath(Analysisdir)
 			else:
-				self.Analysisdir = EnvAnalysisdir
-		self.OffDir=self.Analysisdir+"/GrpOff/"
-		self.GrpDir=self.Analysisdir+"/GrpOff/"
+				self.Analysisdir = abspath(EnvAnalysisdir)
+		self.OffDir = join(self.Analysisdir, "GrpOff")
+		self.GrpDir = join(self.Analysisdir, "GrpOff")
 
 	def initialize(self,Cycle,user,prefFile="", prefDir="", Verbose=False):
 		msg=""
 		ierr=0
-		self.cycle=self.Analysisdir+"/"+Cycle
+		self.cycle = join(self.Analysisdir, Cycle)
 		if not os.path.exists(self.cycle):        
 			os.makedirs(self.cycle)
-		self.calib=self.Analysisdir+"/"+Cycle+"/Calibration"
-		if not os.path.exists(self.calib):        
+			
+		self.calib = join(self.Analysisdir, Cycle, "Calibration")
+		if not os.path.exists(self.calib):
 			os.makedirs(self.calib)
-		self.user=self.Analysisdir+Cycle+"/"+user+"/"
-		if not os.path.exists(self.user):        
+			
+		self.user = join(self.Analysisdir, Cycle, user)
+		if not os.path.exists(self.user):
 			os.makedirs(self.user)
+			
 		if prefFile<>"":
 			self.LstPreffil=prefFile
 		else:
-			self.LstPreffil="mtd.pref"			
+			self.LstPreffil="mtd.pref"
+						
 		if prefDir<>"":
-			self.LstPrefDir=prefDir
+			self.LstPrefDir = prefDir
 		else:
-			self.LstPrefDir=self.user
+			self.LstPrefDir = self.user
+			
 		# Check existence of preference file
 		os.chdir(self.LstPrefDir)
+		
 		print 'look for file --->'
 		print self.LstPrefDir+self.LstPreffil
-		fexist=os.path.exists(self.LstPrefDir+self.LstPreffil)
+		prefFilePath = join(self.LstPrefDir, self.LstPreffil)
+		fexist=os.path.exists(prefFilePath)
 		if not fexist:
 			msg = msg + "Abort: Required Preference file :"+self.LstPreffil
 			msg=msg + "\n NOT FOUND in the directory :"+self.LstPrefDir+'\n'
-			print msg
-			ierr=1
-			return (msg,ierr)
+			raise RuntimeError(msg)
 		else:
 			msg = "Preference file :"+self.LstPreffil+" FOUND in the directory :"+self.LstPrefDir+"\n"
 		print msg
+		
 		# Read preference file: default, read_prefline-label ALWAYS REQUIRED in pref-file
 		# Read preference file: optional params read with updatePrefVal
 		self.OffDir=self.updatePrefVal("OffDir",self.OffDir)
@@ -132,7 +139,7 @@ class files:
 		self.OffFile=self.read_prefline("Offsets")
 		self.GrpFile=self.read_prefline("Grouping")
 		if self.RawDir=='':
-			self.RawDir= '//isis/inst$/ndx'+self.instr+'/instrument/data/'+Cycle+'/'
+			self.RawDir= join(r'\\isis\inst$\ndx%s' % self.instr, 'instrument', 'data', Cycle)
 		else:
 			self.RawDir     = self.updatePrefVal("RawDir",self.RawDir)
 		self.VanDir     = self.RawDir
@@ -150,7 +157,7 @@ class files:
 		self.CorrVanFile               =   self.updatePrefVal("CorrVanFile",self.CorrVanFile)
 		if self.CorrVanFile == "":
 			AutoVan=True
-		self.CorrVanDir                =   self.Analysisdir+"/"+Cycle+"/Calibration"
+		self.CorrVanDir                =   join(self.Analysisdir, Cycle, "Calibration")
 		self.CorrVanDir                =   self.updatePrefVal("CorrVanDir",self.CorrVanDir)
 		#
 		self.VHeight                    =   self.updatePrefVal("VHeight",self.VHeight)
@@ -169,14 +176,14 @@ class files:
 		# ===== Sac and Efficcinecy correction file handling =====
 		self.LowerLambda=self.updatePrefVal("LowerLambda",self.LowerLambda)
 		self.UpperLambda=self.updatePrefVal("UpperLambda",self.UpperLambda)
-		self.SacEffDir=self.Analysisdir+"/"+Cycle+"/Calibration"
-		self.SacEffDir=self.updatePrefVal("SacEffDir",self.SacEffDir)
-		self.SacEffFile=self.CorrVanFile+"_detcorr"
+		self.SacEffDir = join(self.Analysisdir, Cycle, "Calibration")
+		self.SacEffDir = self.updatePrefVal("SacEffDir",self.SacEffDir)
+		self.SacEffFile = self.CorrVanFile+"_detcorr"
 		if  AutoVan:
-			self.CorrVanFile="van_"+self.VrunnoList+"_"+self.VErunnoList
-			self.SacEffFile="corr_"+self.VrunnoList+"_"+self.VErunnoList
+			self.CorrVanFile = "van_"+self.VrunnoList+"_"+self.VErunnoList
+			self.SacEffFile = "corr_"+self.VrunnoList+"_"+self.VErunnoList
 		else:
-			self.SacEffFile=self.updatePrefVal("SacEffFile",self.SacEffFile)
+			self.SacEffFile = self.updatePrefVal("SacEffFile",self.SacEffFile)
 		# ===== Set all Calibration file access =====
 		self.updateCalib()
 		self.VanCorrFileLookup()

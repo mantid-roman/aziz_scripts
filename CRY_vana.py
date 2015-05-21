@@ -55,7 +55,7 @@ def CreateVana(expt, NoAbs=False):
 	print " => VANADIUM FOCUSED"
 	ReplaceSpecialValues(InputWorkspace="Vanadium_foc",OutputWorkspace="Vanadium",NaNValue="0",InfinityValue="0",BigNumberThreshold="99999999.99999999")
 	SaveNexusProcessed(Filename=expt.CorrVanFile+"_unstripped.nxs", InputWorkspace="Vanadium")
-	SaveFocusedXYE(Filename=expt.CorrVanFile+"_unstripped.dat", InputWorkspace="Vanadium", SplitFiles="True")
+	SaveFocusedXYE(Filename=expt.CorrVanFile+"_unstripped.dat", InputWorkspace="Vanadium", SplitFiles=True)
 	stripTheVana(expt)
 	if expt.ExistV=='no' and expt.VGrpfocus=='van':
 		expt.write_prefline("ExistingV","yes")
@@ -101,7 +101,7 @@ def Removebins(expt):
 		print "Strip Vanapeak in bank="+str(i)
 		for peak in  expt.VanPeakList[spec]:
 			RemoveBins(InputWorkspace="Vanadium-"+str(i),OutputWorkspace="Vanadium-"+str(i),XMin=peak[0],XMax=peak[1],RangeUnit="AsInput",Interpolation="Linear",WorkspaceIndex=0)
-		SaveFocusedXYE(Filename=expt.CorrVanFile+"-"+str(spec)+"_.dat", InputWorkspace ="Vanadium-"+str(i), SplitFiles="False")
+		SaveFocusedXYE(Filename=expt.CorrVanFile+"-"+str(spec)+"_.dat", InputWorkspace ="Vanadium-"+str(i), SplitFiles=False)
 
 def vanStrip(expt):
 	for i in expt.bankList:
@@ -109,7 +109,7 @@ def vanStrip(expt):
 		if expt.VanPeakWdt[spec] <> 0:
 			print "Strip Vanapeaks with params : bank="+str(i)+" FWHM="+str(expt.VanPeakWdt[spec])+" Tol="+str(expt.VanPeakTol[spec])
 			StripPeaks(InputWorkspace="Vanadium-"+str(i), OutputWorkspace="Vanadium-"+str(i),FWHM =expt.VanPeakWdt[spec],Tolerance=expt.VanPeakTol[spec],WorkspaceIndex=0)
-			SaveFocusedXYE(Filename=expt.CorrVanFile+"-"+str(spec)+"_.dat", InputWorkspace="Vanadium-"+str(i), SplitFiles="False")
+			SaveFocusedXYE(Filename=expt.CorrVanFile+"-"+str(spec)+"_.dat", InputWorkspace="Vanadium-"+str(i), SplitFiles=False)
 
 def vanSpline(expt):
 	for i in expt.bankList:
@@ -118,12 +118,12 @@ def vanSpline(expt):
 		for peak in  expt.VanPeakList[spec]:
 			MaskBins(InputWorkspace="Vanadium-"+str(i),OutputWorkspace="Vanadium-"+str(i),XMin=peak[0],XMax=peak[1])
 		SplineBackground(InputWorkspace="Vanadium-"+str(i),OutputWorkspace="Vanadium-"+str(i),WorkspaceIndex=0,NCoeff=int(expt.VanSplineCoef))
-		SaveFocusedXYE(Filename=expt.CorrVanFile+"-"+str(spec)+"_.dat", InputWorkspace="Vanadium-"+str(i), SplitFiles="False")
+		SaveFocusedXYE(Filename=expt.CorrVanFile+"-"+str(spec)+"_.dat", InputWorkspace="Vanadium-"+str(i), SplitFiles=False)
 
 def vanSplineOnly(expt):
 	for i in expt.bankList:
 		spec=i-1
 		SplineBackground(InputWorkspace="Vanadium-"+str(i),OutputWorkspace="Vanadium-"+str(i),WorkspaceIndex=0,NCoeff=int(expt.VanSplineCoef))
-		SaveFocusedXYE(Filename=expt.CorrVanFile+"-"+str(spec)+"_.dat", InputWorkspace="Vanadium-"+str(i), SplitFiles="False")
+		SaveFocusedXYE(Filename=expt.CorrVanFile+"-"+str(spec)+"_.dat", InputWorkspace="Vanadium-"+str(i), SplitFiles=False)
 			
 

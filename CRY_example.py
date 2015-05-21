@@ -1,10 +1,13 @@
-from mantid.simpleapi import *
 import CRY_ini
 import CRY_focus
+
+from mantid.simpleapi import config
+config['datasearch.searcharchive'] = 'On'
+print config['datasearch.searcharchive']
 	
-expt=CRY_ini.files("hrpd")
-expt.RawDir="C:/AZIZWORK/BigData/HRPD/Bigg"
-expt.initialize('Cycle09_2','tests',prefFile='mtd_tst.pref')
+expt=CRY_ini.files("hrpd",Analysisdir='test')
+#expt.RawDir="C:/AZIZWORK/BigData/HRPD/Bigg"
+expt.initialize('cycle_09_2',user = 'tester',prefFile='mtd.pref')
 expt.tell()
 #------------------------------------
 # 1) process single runs, given as 

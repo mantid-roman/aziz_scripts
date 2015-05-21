@@ -10,13 +10,13 @@ def Load(outputArea,pathtofile,expt,add=False):
 	sum=outputArea
 	if add:
 		outputArea=outputArea+"add"
-	try:
-		fin=open(pathtofile,"r")
-	except:
-		print 'WARNING!!!!!!!  '+pathtofile+' NOT FOUND'
-		return 0.0
-	else:
-		fin.close()
+#	try:
+#		fin=open(pathtofile,"r")
+#	except:
+#		print 'WARNING!!!!!!!  '+pathtofile+' NOT FOUND'
+#		raise
+#	else:
+#		fin.close()
 	if oldversion:
 		LoadRaw(Filename=pathtofile,OutputWorkspace=outputArea)
 	else:

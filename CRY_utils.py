@@ -5,8 +5,8 @@ import re
 def getSampleList(basefile,listText,directory=""):
 	raw=True
 	thedir=""
-	if directory<>"":
-		thedir=directory+"/"		
+	#if directory<>"":
+	#	thedir=directory+"/"		
 	samfillist=[]
 	p=re.compile("s([0-9]+)[ ]+(.+)")
 	m=p.match(listText)
